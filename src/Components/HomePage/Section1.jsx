@@ -17,12 +17,12 @@ import { motion } from 'framer-motion'
 
       const Section1 = () => {
       return (
-         <div className="relative h-screen text-[#CBACBF] text-center bg-grid pb-15">
+         <div className="relative min-h-screen overflow-hidden border-0 text-[#CBACBF] text-center bg-grid ">
             {/* Overlay */}
             <div className="absolute bg-gradient-to-b from-transparent to-[#01081b] inset-0 z-0"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center items-center h-full space-y-4 px-4 pt-60">
+            <div className="relative z-10 flex flex-col justify-center items-center min-h-screen space-y-4 px-4 pt-50">
                <motion.p
                   className="font-semibold text-xs sm:text-sm text-[#d8d6d6]"
                   variants={fadeUp}
