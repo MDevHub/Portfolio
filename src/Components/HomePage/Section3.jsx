@@ -19,8 +19,8 @@ import { IoCopyOutline } from 'react-icons/io5'
 
 const Section3 = () => {
 	return (
-		<div className="bg-[#01081b] text-white min-h-screen px-4 md:px-8 pt-5">
-			<div className="grid sm:grid-cols-5 grid-cols-1 gap-6 max-w-full mx-auto lg:h-[480px] h-auto">
+		<div className="bg-[#01081b] text-white px-3 md:px-6 pt-4">
+			<div className="grid sm:grid-cols-5 grid-cols-1 gap-6 max-w-full mx-auto h-auto">
 
 				{/* Right Side Grid (now comes first on large screens) */}
 				<div className="sm:col-span-2 grid grid-cols-1 gap-6 order-2 lg:order-1">
@@ -29,10 +29,10 @@ const Section3 = () => {
 					<div className="px-3 py-6 md:p-6 rounded-4xl overflow-hidden bg-gradient-to-b from-[#5ac6ff1a] via-transparent to-[#01081b]/40 border border-[#CBACBF]/20 group">
 						<div className="transition-all duration-500 ease-in-out group-hover:translate-x-2">
 							<p className="text-xl sm:text-2xl md:text-3xl font-bold">
-								Tech enthusiast <br className='sm:hidden' /> with a passion for development.
+								Tech enthusiast <br className='hidden' /> with a passion for development.
 							</p>
 							<p className="text-xl sm:text-2xl md:text-3xl font-bold">
-								I design modern, <br className='sm:hidden' /> user focused products.
+								I design modern, <br className='hidden' /> user focused products.
 							</p>
 						</div>
 					</div>
@@ -160,8 +160,8 @@ const Section3 = () => {
 					<p className="relative z-20 text-sm font-normal font-sans text-white group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 						The Inside Scoop<br />
 						<span className="text-xl sm:text-2xl md:text-3xl font-semibold text-white"> 
-							currently building advanced <br className='hidden md:block' /> projects with <span className="text-[#CBACBF]">TypeScript</span>, <br className='hidden md:block' />
-							while also expanding my skills <br className='hidden md:block' /> with <span className="text-[#CBACBF]">FastAPI</span> and working <br className='hidden md:block' /> extensively with <span className="text-[#CBACBF]">RESTful APIs</span>.
+							currently building advanced <br className='hidden' /> projects with <span className="text-[#CBACBF]">TypeScript</span>, <br className='hidden' />
+							while also expanding my skills <br className='hidden' /> with <span className="text-[#CBACBF]">FastAPI</span> and working <br className='hidden' /> extensively with <span className="text-[#CBACBF]">RESTful APIs</span>.
 						</span>
 					</p>
 				</div>

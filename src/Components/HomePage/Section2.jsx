@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 	const Section2 = () => {
 		return (
-			<div className="bg-[#01081b] text-white min-h-screen px-4 md:px-8 pt-20 md:pt-50">
+			<div className="bg-[#01081b] text-white min-h-screen px-3 md:px-6 pt-20 md:pt-50">
 				<div className="grid lg:grid-cols-5 grid-cols-1 gap-6 max-w-full mx-auto lg:h-[420px] h-auto">
 					{/* First (Main Left) */}
 					<div
