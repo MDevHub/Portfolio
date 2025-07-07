@@ -1,6 +1,6 @@
-   import React from 'react'
-   import { FaTelegramPlane } from 'react-icons/fa'
-   import { motion } from 'framer-motion'
+import React from 'react'
+import { FaTelegramPlane } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
       const fadeUp = {
       hidden: { opacity: 0, y: 30 },
@@ -38,7 +38,7 @@
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 1.8, ease: 'easeOut' }}
-                  className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] rounded-full bg-[#ffffff12] blur-2xl opacity-20 z-0"
+                  className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#021036] blur-20xl opacity-20 z-0"
                />
 
                {/* Glowing circle expanding from center on page load */}
@@ -46,7 +46,7 @@
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 1.8, ease: 'easeOut' }}
-                  className="absolute right-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] rounded-full bg-[#ffffff12] blur-2xl opacity-20 z-0"
+                  className="absolute right-0 top-[100%] sm:top-[90%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#021036] blur-20xl opacity-20 z-0"
                />
 
                <motion.h1
@@ -105,7 +105,7 @@
                      <br />
 
                      <motion.span
-                        className="inline-block"
+                        className="inline-block z-20"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.2, duration: 0.6 }}
@@ -116,7 +116,7 @@
                </motion.h1>
 
                <motion.p
-                  className="text-[#d8d6d6] text-xs md:text-xl"
+                  className="text-[#d8d6d6] text-xs md:text-xl z-20"
                   variants={fadeUp}
                   initial="hidden"
                   animate="visible"
@@ -168,7 +168,7 @@
 
                   {/* Actual button content */}
                   <button
-                     className="cursor-pointer outline-0 border-0 relative z-10 w-[180px] sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] font-medium"
+                     className="rounded-4xl cursor-pointer outline-0 border-0 relative z-10 w-[180px] sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] font-medium"
                   >
                      Show my work
                      <FaTelegramPlane className="text-lg" />

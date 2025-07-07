@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'
 
 	const Section2 = () => {
 		return (
-			<div className="bg-[#01081b] text-white min-h-screen px-4 md:px-8 py-50">
+			<div className="bg-[#01081b] text-white min-h-screen px-4 md:px-8 pt-20 md:pt-50">
 				<div className="grid lg:grid-cols-5 grid-cols-1 gap-6 max-w-full mx-auto lg:h-[420px] h-auto">
 					{/* First (Main Left) */}
 					<div
-						className="lg:col-span-3 relative flex place-items-end justify-start px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20"
+						className="group lg:col-span-3 relative flex place-items-end justify-start px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20"
 						style={{
 							backgroundImage: `url(${LaptopImg})`,
 							backgroundSize: 'cover',
@@ -18,8 +18,8 @@ import { motion } from 'framer-motion'
 						}}
 					>
 						{/* Overlay */}
-						<div className="absolute inset-0 bg-gradient-to-r from-[#01081b]/40 to-transparent z-0"></div>
-						<p className="relative z-10 text-sm font-normal font-sans text-white">
+						<div className="absolute inset-0 bg-gradient-to-r from-[#01081b]/70 to-transparent z-0"></div>
+						<p className="relative z-10 text-sm font-normal font-sans text-white group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 							I am a <br /> <span className='text-2xl md:text-3xl font-bold text-white'> Passionate <br /> Frontend Software <br /> Developer</span>
 						</p>
 					</div>
@@ -30,7 +30,7 @@ import { motion } from 'framer-motion'
 						{/* Second (Top Right) */}
 						{/* Second (Top Right) */}
 						<div
-							className="relative flex items-end px-3 py-6 md:p-6 rounded-4xl overflow-hidden bg-gradient-to-b from-transparent to-[#01081b]/40 border border-[#CBACBF]/20"
+							className="group relative flex items-end px-3 py-6 md:p-6 rounded-4xl overflow-hidden bg-gradient-to-b from-transparent to-[#01081b]/40 border border-[#CBACBF]/20"
 						>
 							{/* Earth with subtle orbit lines at bottom */}
 							<div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 z-0">
@@ -52,7 +52,7 @@ import { motion } from 'framer-motion'
 							<div className="absolute inset-0 bg-[#01081b]/70 z-0"></div>
 
 							{/* Text */}
-							<p className="relative z-10 text-2xl font-bold">
+							<p className="relative z-10 text-2xl font-bold group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 								I prioritize transparency,<br /> fostering open <br /> communication
 							</p>
 
@@ -78,7 +78,7 @@ import { motion } from 'framer-motion'
 							`}</style>
 						</div>
 						{/* Third (Bottom Right) */}
-						<div className="relative px-3 py-6 md:p-6 rounded-4xl border border-[#CBACBF]/20 bg-gradient-to-r from-[#01081b]/40 to-transparent flex items-end overflow-hidden">
+						<div className="group relative px-3 py-6 md:p-6 rounded-4xl border border-[#CBACBF]/20 bg-gradient-to-r from-[#01081b]/40 to-transparent border-dashed flex items-end overflow-hidden">
 							{/* Glowing Tracer */}
 							<motion.div
 								className="absolute top-0 left-0 w-full h-full rounded-4xl pointer-events-none"
@@ -125,16 +125,16 @@ import { motion } from 'framer-motion'
 							</motion.div>
 
 							{/* Glowing bar tracer */}
-							<span className="absolute w-16 h-1 bg-gradient-to-r from-[#CBACBF] to-[#5ac6ff] blur-md opacity-100 animate-glow-bar z-20" />
+							<span className="absolute w-16 h-1 bg-gradient-to-r from-[#CBACB] to-[#021036] blur-md opacity-100 animate-glow-bar z-20" />
 							{/* Content */}
 							<div className="relative z-10">
-								<p className="text-sm text-white font-light font-sans mt-4">
+								<p className="text-sm text-white font-light font-sans mt-4 group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 									I constantly try to improve <br />
 									<span className="font-bold text-3xl">My tech stack</span>
 								</p>
 
-								<div className="flex flex-wrap gap-2 mt-4">
-									{['JavaScript', 'TypeScript', 'ReactJs', 'TailwindCSS', 'FastAPI', 'Firebase', 'Framer motion'].map((skill, i) => (
+								<div className="flex flex-wrap gap-2 mt-4 group-hover:translate-x-2 transition-all duration-500 ease-in-out">
+									{['JavaScript', 'TypeScript', 'ReactJs', 'TailwindCSS', 'FastAPI', 'Firebase', 'RestAPI', 'Framer motion'].map((skill, i) => (
 									<span
 										key={i}
 										className="text-xs sm:text-sm border border-[#CBACBF]/40 text-white px-2 py-1 rounded-full bg-[#01081b]/60"
@@ -143,7 +143,8 @@ import { motion } from 'framer-motion'
 									</span>
 									))}
 								</div>
-								<span className="absolute w-16 h-1 bg-gradient-to-r from-[#CBACBF] to-[#5ac6ff] blur-md opacity-100 animate-glow-bar z-20" />
+								{/* Glowing bar tracer */}
+								<span className="absolute w-16 h-1 bg-gradient-to-r from-[#CBACBF] to-[#021036] blur-md opacity-100 animate-glow-bar z-20" />
 							</div>
 
 							{/* Glow Animation */}
