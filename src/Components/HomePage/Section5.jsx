@@ -56,7 +56,7 @@ const Section5 = () => {
    }, [isMobile, visibleIdx])
 
    return (
-      <div className="relative bg-[#01081b] py-16 px-4 md:px-12 z-0">
+      <div className="relative bg-[#01081b] py-16 px-4 md:px-6 z-0">
          <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-12">
             <span className="text-[#CBACBF]">Execution</span> Process
          </h2>
