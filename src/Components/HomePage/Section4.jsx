@@ -13,7 +13,7 @@ const projects = [
    { img: vodi, title: 'Vodi Movie', desc: 'A comprehensive movie database to explore films by different genres.', link: 'https://vodimovieweb.vercel.app' },
    { img: bloom, title: 'Bloom Clinic', desc: 'A clean and modern website for a medical clinic.', link: 'https://bloom-clinic-navy.vercel.app' },
    { img: wengdo, title: 'Wengdo Food Hub', desc: 'Delicious meals with a seamless digital dining experience.', link: 'https://wengdomeals.vercel.app' },
-   { img: next, title: 'Next Move', desc: 'Smooth animations and transitions with seamless navigation.', link: 'https://nextmoveonly.vercel.app' },
+   { img: next, title: 'Portfolio V1', desc: 'Smooth animations and transitions with seamless navigation.', link: 'https://abdulrahmanportfolio-tau.vercel.app' },
 ]
 
 const Section4 = () => {
@@ -50,7 +50,7 @@ const Section4 = () => {
 }, [visibleIdx]) // 👈 Add this so it reacts to changes
 
    return (
-      <div className="bg-[#01081b] px-3 md:px-6">
+      <div id='projects' className="bg-[#01081b] px-3 md:px-6">
          <div className="py-20 md:py-30">
             <h1 className="text-white text-sm sm:text-xl text-left font-semibold">
                A small selection of my recent <span className="text-[#CBACBF]">projects</span>

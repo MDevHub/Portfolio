@@ -93,15 +93,17 @@ const Section3 = () => {
 							</svg>
 	
 							{/* Actual button content */}
-							<button
-								className="
-									px-2 cursor-pointer outline-0 border-0 relative z-10 sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] rounded-4xl font-medium
-									group-hover:translate-x-2 transition-all duration-500 ease-in-out
-								"
-							>
-								<IoCopyOutline className="text-lg" />
-								Download My resume
-							</button>
+							<a href="https://docs.google.com/document/d/1ypZe_zwHp1FlfWae083jjPzwM4N6WZJfWbeaN0BGTmQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+								<button
+									className="
+										px-2 cursor-pointer outline-0 border-0 relative z-10 sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] rounded-4xl font-medium
+										group-hover:translate-x-2 transition-all duration-500 ease-in-out
+									"
+								>
+									<IoCopyOutline className="text-lg" />
+									Download My resume
+								</button>
+							</a>
 						</motion.div>
 						{/* Glow Animations */}
 						<style>{`

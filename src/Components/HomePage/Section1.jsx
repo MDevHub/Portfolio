@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import { Link } from 'react-scroll'
 
       const fadeUp = {
       hidden: { opacity: 0, y: 30 },
@@ -167,12 +168,14 @@ import { motion } from 'framer-motion'
                   </svg>
 
                   {/* Actual button content */}
-                  <button
-                     className="rounded-4xl cursor-pointer outline-0 border-0 relative z-10 w-[180px] sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] font-medium"
-                  >
-                     Show my work
-                     <FaTelegramPlane className="text-lg" />
-                  </button>
+                  <Link to="projects" smooth={true} duration={600} offset={-10}>
+                     <button
+                        className="rounded-4xl cursor-pointer outline-0 border-0 relative z-10 w-[180px] sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] font-medium"
+                     >
+                        Show my work
+                        <FaTelegramPlane className="text-lg" />
+                     </button>
+                  </Link>
                </motion.div>
             </div>
 

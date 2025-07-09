@@ -28,9 +28,9 @@ import { motion } from 'framer-motion'
 
 const Section6 = () => {
    return (
-      <div className="bg-[#01081b] text-white px-3 md:px-6 py-16 pb-5 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+      <div id='contact' className="bg-[#01081b] text-white px-3 md:px-6 py-16 pb-5 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
          {/* Left Side */}
-         <div className="border-b border-l border-l-[#CBACBF]/30 border-b-[#CBACBF]/30 rounded-4xl md:col-span-2 p-6 md:p-10 flex flex-col justify-between gap-8">
+         <div className="relative border-b border-l border-l-[#CBACBF]/30 border-b-[#CBACBF]/30 rounded-4xl md:col-span-2 p-6 md:p-10 flex flex-col justify-between gap-8">
             <div className="space-y-8">
                <p className="text-xs sm:text-sm font-light opacity-70">
                   I develop human-centered products with unique modern experiences.
@@ -47,17 +47,37 @@ const Section6 = () => {
 
             {/* Icons */}
             <div className="flex gap-4 flex-wrap">
-                  {techStack.map(({ Icon, color, name }, idx) => (
-                     <div
-                        key={idx}
-                        className="w-13 h-13 flex items-center justify-center bg-white rounded-2xl border border-[#CBACBF]/30 hover:scale-110 transition-transform"
-                        title={name}
-                     >
-                     <Icon className="text-3xl" style={{ color }} />
-                     </div>
-                  ))}
-               </div>
+               {techStack.map(({ Icon, color, name }, idx) => (
+                  <div
+                     key={idx}
+                     className="w-13 h-13 flex items-center justify-center bg-white rounded-2xl border border-[#CBACBF]/30 hover:scale-110 transition-transform"
+                     title={name}
+                  >
+                  <Icon className="text-3xl" style={{ color }} />
+                  </div>
+               ))}
             </div>
+            {/* Glowing circle tracer */}
+            <div className="absolute inset-0 pointer-events-none">
+            <span className="z-0  animate-glow-circle absolute w-16 h-16 rounded-full blur-3xl " />
+            </div>
+         </div>
+
+         <style>{`
+            @keyframes glow-circle {
+               0%   { top: 0; left: 0; transform: none; }
+               25%  { top: 0; left: 100%; transform: translateX(-100%); }
+               50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+               75%  { top: 100%; left: 0; transform: translateY(-100%); }
+               100% { top: 0; left: 0; transform: none; }
+            }
+
+            .animate-glow-circle {
+               animation: glow-circle 20s linear infinite;
+               background: #5130c9;
+               // box-shadow: 0 0 20px #CBACBF;
+            }
+         `}</style>
 
          {/* Right Side */}
          <div className="bg-gradient-to-b from-[#082061] to-[#5130c9] md:col-span-1 border-b border-b-[#CBACBF]/30 border-l-[#CBACBF]/30 rounded-4xl p-6 md:p-10 relative overflow-hidden">
@@ -82,11 +102,11 @@ const Section6 = () => {
                </div>
 
                {/* Right: Jumping Image */}
-               <div className="col-span-2 flex justify-center">
+               <div className="col-span-2 flex ">
                   <motion.img
                      src={ContactImg}
                      alt="Contact Animation"
-                     className="sm-w-44 md:w-60 object-contain object-bottom"
+                     className="sm-w-44 md:w-50 lg:w-60 object-contain object-bottom"
                      animate={{ y: [0, -10, 0] }}
                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   />
