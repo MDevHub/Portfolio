@@ -159,7 +159,7 @@ const Section3 = () => {
 					<div className="absolute bottom-0 right-0 w-50 h-full sm:w-80 sm:h-60 rounded-l-xl bg-[#01081b7a] backdrop-blur-[] z-10" />
 
 					{/* Main Text Content */}
-					<p className="relative z-20 text-sm font-normal font-sans text-white group-hover:translate-x-2 transition-all duration-500 ease-in-out">
+					<p className="relative z-20 text-sm md:max-w-120 font-normal font-sans text-white group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 						The Inside Scoop<br />
 						<span className="text-xl sm:text-2xl md:text-3xl font-semibold text-white"> 
 							currently building advanced <br className='hidden' /> projects with <span className="text-[#CBACBF]">TypeScript</span>, <br className='hidden' />

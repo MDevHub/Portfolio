@@ -11,7 +11,7 @@ import {
    SiFirebase,
    SiPostman
 } from 'react-icons/si'
-import ContactImg from '../assets/Images/anime.jpg' // Replace with your actual image
+import ContactImg from '../../assets/Images/anime.jpg'
 import { motion } from 'framer-motion'
 
    const techStack = [
@@ -26,7 +26,7 @@ import { motion } from 'framer-motion'
       { Icon: SiPostman, color: '#FF6C37', name: 'RestAPI' },
    ];
 
-const Section6 = () => {
+const Section7 = () => {
    return (
       <div id='contact' className="bg-[#01081b] text-white px-3 md:px-6 py-16 pb-5 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
          {/* Left Side */}
@@ -117,4 +117,4 @@ const Section6 = () => {
    )
 }
 
-export default Section6
+export default Section7

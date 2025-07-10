@@ -39,7 +39,7 @@ import { Link } from 'react-scroll'
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 1.8, ease: 'easeOut' }}
-                  className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#021036] blur-20xl opacity-20 z-0"
+                  className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#040d27] blur-20xl z-0"
                />
 
                {/* Glowing circle expanding from center on page load */}
@@ -47,11 +47,19 @@ import { Link } from 'react-scroll'
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 1.8, ease: 'easeOut' }}
-                  className="absolute right-0 top-[100%] sm:top-[90%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#021036] blur-20xl opacity-20 z-0"
+                  className="absolute right-0 top-[100%] sm:top-[90%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#040d27] blur-30xl z-0"
+               />
+
+               {/* Glowing circle expanding from center on page load */}
+               <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.2, duration: 1.8, ease: 'easeOut' }}
+                  className="absolute left-0 top-[100%] sm:top-[90%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#040d27] blur-30xl z-0"
                />
 
                <motion.h1
-                  className="text-3xl md:text-4xl lg:text-[62px] font-bold text-white leading-normal"
+                  className="text-3xl md:text-4xl lg:text-[57px] font-bold text-white leading-normal"
                   initial="hidden"
                   animate="visible"
                >

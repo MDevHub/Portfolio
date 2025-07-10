@@ -17,40 +17,37 @@ const projects = [
 ]
 
 const Section4 = () => {
-   const [visibleIndices, setVisibleIndices] = useState(new Set())
+   const [visibleIdx, setVisibleIdx] = useState(null)
    const containerRefs = useRef([])
 
    useEffect(() => {
-      const isMobile = window.innerWidth < 768
-      if (!isMobile) return
+   const isMobile = window.innerWidth < 768
+   if (!isMobile) return
 
-      const observer = new IntersectionObserver(
-         (entries) => {
-            setVisibleIndices((prev) => {
-               const updated = new Set(prev)
-               entries.forEach((entry) => {
-                  const idx = parseInt(entry.target.getAttribute('data-idx'))
-                  if (entry.isIntersecting) {
-                     updated.add(idx)
-                  } else {
-                     updated.delete(idx)
-                  }
-               })
-               return new Set(updated)
-            })
-         },
-         { threshold: 0.8 }
-      )
+   const observer = new IntersectionObserver(
+      (entries) => {
+         entries.forEach((entry) => {
+            const idx = parseInt(entry.target.getAttribute('data-idx'))
 
-      containerRefs.current.forEach((el, idx) => {
-         if (el) {
-            el.setAttribute('data-idx', idx)
-            observer.observe(el)
-         }
-      })
+            if (entry.isIntersecting) {
+               setVisibleIdx(idx)
+            } else if (visibleIdx === idx) {
+               setVisibleIdx(null)
+            }
+         })
+      },
+      { threshold: 0.5 }
+   )
 
-      return () => observer.disconnect()
-   }, [])
+   containerRefs.current.forEach((el, idx) => {
+      if (el) {
+         el.setAttribute('data-idx', idx)
+         observer.observe(el)
+      }
+   })
+
+   return () => observer.disconnect()
+}, [visibleIdx]) // 👈 Add this so it reacts to changes
 
    return (
       <div id='projects' className="bg-[#01081b] px-3 md:px-6">
@@ -59,12 +56,12 @@ const Section4 = () => {
                A small selection of my recent <span className="text-[#CBACBF]">projects</span>
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-3">
                {projects.map((project, idx) => (
                   <div
                      key={idx}
                      ref={(el) => (containerRefs.current[idx] = el)}
-                     className="relative group border border-[#CBACBF]/30 h-[50vh] sm:h-[60vh] md:h-screen overflow-hidden rounded-3xl"
+                     className="relative group border border-[#CBACBF]/30 h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden rounded-3xl"
                   >
                      {/* Image */}
                      <img
@@ -73,16 +70,16 @@ const Section4 = () => {
                         className={`
                            w-full h-full object-cover transform transition-transform duration-700 ease-in-out
                            group-hover:scale-105
-                           ${visibleIndices.has(idx) ? 'scale-105' : ''}
+                           ${visibleIdx === idx ? 'scale-105' : ''}
                         `}
                      />
 
                      {/* Sliding Content */}
                      <div
                         className={`
-                           absolute bottom-0 left-0 w-full h-[18vh] sm:h-[20vh] backdrop-blur-3xl bg-black/60 text-white px-3 md:px-5 py-3 sm:py-6
+                           absolute bottom-0 left-0 w-full h-[18vh] sm:h-[20vh] backdrop-blur-xl bg-black/50 text-white px-3 md:px-5 py-3 
                            transition-transform duration-700 ease-in-out
-                           ${visibleIndices.has(idx) ? 'translate-y-0' : 'translate-y-full'}
+                           ${visibleIdx === idx ? 'translate-y-0' : 'translate-y-full'}
                            sm:group-hover:translate-y-0
                         `}
                      >
@@ -92,7 +89,7 @@ const Section4 = () => {
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full backdrop-blur-sm bg-transparent hover:bg-black/5 transition"
+                              className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/5 transition"
                            >
                               <FaArrowRight className="text-white text-lg rotate-315" />
                            </a>
