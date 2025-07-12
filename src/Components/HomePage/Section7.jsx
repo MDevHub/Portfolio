@@ -59,7 +59,7 @@ const Section7 = () => {
             </div>
             {/* Glowing circle tracer */}
             <div className="absolute inset-0 pointer-events-none">
-            <span className="z-0  animate-glow-circle absolute w-16 h-16 rounded-full blur-3xl " />
+            <span className="z-0  animate-glow-circle absolute w-16 h-16 rounded-full blur-3xl "/>
             </div>
          </div>
 
@@ -91,13 +91,21 @@ const Section7 = () => {
             <div className='grid grid-cols-1 sm:grid-cols-3 items-end md:gap-3 mt-8'>
                {/* Left: Social Icons */}
                <div className='flex md:flex-col col-span-1 gap-2'>
-                  {[FaTwitter, FaLinkedin, FaGithub, FaAt].map((Icon, idx) => (
-                     <div
-                     key={idx}
-                     className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-transparent text-[white] rounded-xl border border-[#CBACBF]/30 hover:scale-110 transition-transform"
+                  {[
+                     { Icon: FaTwitter, url: 'https://twitter.com/Hard2kill_AO' },
+                     { Icon: FaLinkedin, url: 'https://www.linkedin.com/in/musbaudeen-abdulrahman-3a0127369' },
+                     { Icon: FaGithub, url: 'https://github.com/MDevHub' },
+                     { Icon: FaAt, url: 'mailto:musbaudeenabdulrahman040@gmail.com' },
+                     ].map(({ Icon, url }, idx) => (
+                     <a
+                        key={idx}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-transparent text-white rounded-xl border border-[#CBACBF]/30 hover:scale-110 transition-transform"
                      >
-                     <Icon className="text-xl sm:text-3xl" />
-                     </div>
+                        <Icon className="text-xl sm:text-3xl" />
+                     </a>
                   ))}
                </div>
 
