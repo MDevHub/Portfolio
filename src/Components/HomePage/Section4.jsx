@@ -50,8 +50,8 @@ const Section4 = () => {
 }, [visibleIdx]) // 👈 Add this so it reacts to changes
 
    return (
-      <div id='projects' className="bg-[#01081b] px-3 md:px-6">
-         <div className="py-20 md:py-30">
+      <div id='projects' className="bg-[#01081b] px-4 md:px-6 lg:px-8 xl:px-10 ">
+         <div className="py-[80px] md:py-[150px]">
             <h1 className="text-white text-sm sm:text-xl text-left font-semibold">
                A small selection of my recent <span className="text-[#CBACBF]">projects</span>
             </h1>
@@ -61,7 +61,7 @@ const Section4 = () => {
                   <div
                      key={idx}
                      ref={(el) => (containerRefs.current[idx] = el)}
-                     className="relative group border border-[#CBACBF]/30 h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden rounded-3xl"
+                        className="relative group border border-[#CBACBF]/30 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] overflow-hidden rounded-3xl"
                   >
                      {/* Image */}
                      <img

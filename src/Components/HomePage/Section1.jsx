@@ -18,12 +18,12 @@ import { Link } from 'react-scroll'
 
       const Section1 = () => {
       return (
-         <div className="relative min-h-screen overflow-hidden border-0 text-[#CBACBF] text-center bg-grid ">
+         <div className="relative min-h-screen max-h-screen border-0 text-[#CBACBF] text-center bg-grid ">
             {/* Overlay */}
             <div className="absolute bg-gradient-to-b from-transparent to-[#01081b] inset-0 z-0"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center items-center min-h-screen space-y-4 px-4 pt-50">
+            <div className="relative z-10 flex flex-col justify-center items-center min-h-screen space-y-4 px-4 pt-50 ">
                <motion.p
                   className="font-semibold text-xs sm:text-sm text-[#d8d6d6]"
                   variants={fadeUp}
@@ -39,7 +39,7 @@ import { Link } from 'react-scroll'
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 1.8, ease: 'easeOut' }}
-                  className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#040d27] blur-20xl z-0"
+                  className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[#040d27] blur-[50xl] z-0"
                />
 
                {/* Glowing circle expanding from center on page load */}
@@ -59,7 +59,7 @@ import { Link } from 'react-scroll'
                />
 
                <motion.h1
-                  className="text-3xl md:text-4xl lg:text-[57px] font-bold text-white leading-normal"
+                  className="text-3xl md:text-4xl lg:text-[3.5rem] font-bold text-white leading-normal"
                   initial="hidden"
                   animate="visible"
                >
@@ -149,38 +149,38 @@ import { Link } from 'react-scroll'
                      preserveAspectRatio="none"
                   >
                      <rect
-                     x="2"
-                     y="2"
-                     width="196"
-                     height="56"
-                     rx="12"
-                     ry="12"
-                     stroke="#CBACBF"
-                     strokeWidth="0.5"
-                     fill="transparent"
+                        x="2"
+                        y="2"
+                        width="196"
+                        height="56"
+                        rx="12"
+                        ry="12"
+                        stroke="#CBACBF"
+                        strokeWidth="0.5"
+                        fill="transparent"
                      />
                      <rect
-                     x="2"
-                     y="2"
-                     width="196"
-                     height="56"
-                     rx="12"
-                     ry="12"
-                     stroke="#3a0bbd"
-                     strokeWidth="0.5"
-                     fill="none"
-                     strokeDasharray="200"
-                     strokeDashoffset="200"
-                     className="animate-borderstroke"
+                        x="2"
+                        y="2"
+                        width="196"
+                        height="56"
+                        rx="12"
+                        ry="12"
+                        stroke="#3a0bbd"
+                        strokeWidth="0.5"
+                        fill="none"
+                        strokeDasharray="200"
+                        strokeDashoffset="200"
+                        className="animate-borderstroke"
                      />
                   </svg>
 
                   {/* Actual button content */}
-                  <Link to="projects" smooth={true} duration={600} offset={-10}>
+                  <Link to="projects" smooth={true} duration={1000} offset={-10}>
                      <button
                         className="rounded-4xl cursor-pointer outline-0 border-0 relative z-10 w-[180px] sm:w-[240px] h-[50px] flex items-center justify-center gap-2 text-sm sm:text-base text-[#d8d6d6] font-medium"
                      >
-                        Show my work
+                           Show my work
                         <FaTelegramPlane className="text-lg" />
                      </button>
                   </Link>

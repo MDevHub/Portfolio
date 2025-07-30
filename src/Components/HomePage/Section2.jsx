@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'
 
 	const Section2 = () => {
 		return (
-			<div id='about' className="bg-[#01081b] border-0 outline-0 text-white min-h-screen px-3 md:px-6 pt-20 md:pt-50">
-				<div className="grid lg:grid-cols-5 grid-cols-1 gap-6 max-w-full mx-auto lg:h-[420px] h-auto">
+			<div id='about' className="bg-[#01081b] border-0 outline-0 text-white px-4 md:px-6 lg:px-8 xl:px-10 pt-[80px] md:pt-[200px] max-w-[100vw]">
+				<div className="grid lg:grid-cols-5 grid-cols-1 gap-6 max-w-full h-auto">
 					{/* First (Main Left) */}
 					<div
-						className="group lg:col-span-3 relative flex place-items-end justify-start px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20 outline-0"
+						className="h-50 sm:h-auto items-center group lg:col-span-3 relative flex place-items-end justify-start px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20 outline-0"
 						style={{
 							backgroundImage: `url(${LaptopImg})`,
 							backgroundSize: 'cover',
@@ -28,12 +28,11 @@ import { motion } from 'framer-motion'
 					<div className="lg:col-span-2 grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
 						
 						{/* Second (Top Right) */}
-						{/* Second (Top Right) */}
 						<div
-							className="group relative flex items-end px-3 py-6 md:p-6 rounded-4xl overflow-hidden bg-gradient-to-b from-transparent to-[#01081b]/40 border border-[#CBACBF]/20"
+							className="h-50 sm:h-auto group relative flex items-end px-3 py-6 md:p-6 rounded-4xl overflow-hidden bg-gradient-to-b from-transparent to-[#01081b]/50 border border-[#CBACBF]/20"
 						>
 							{/* Earth with subtle orbit lines at bottom */}
-							<div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 z-0">
+							<div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 z-0">
 								<div className="relative w-100 h-100">
 									{/* Thin orbit ring */}
 									<div className="absolute inset-0 border border-[#CBACBF]/30 rounded-full animate-spin-slow" />
@@ -49,7 +48,7 @@ import { motion } from 'framer-motion'
 							</div>
 
 							{/* Dark overlay for readability */}
-							<div className="absolute inset-0 bg-[#01081b]/70 z-0"></div>
+							<div className="absolute inset-0 bg-[#01081b]/60 z-0"></div>
 
 							{/* Text */}
 							<p className="relative z-10 text-2xl font-bold group-hover:translate-x-2 transition-all duration-500 ease-in-out">
@@ -77,8 +76,9 @@ import { motion } from 'framer-motion'
 								}
 							`}</style>
 						</div>
+						
 						{/* Third (Bottom Right) */}
-						<div className="group relative px-3 py-6 md:p-6 rounded-4xl border border-[#CBACBF]/20 bg-gradient-to-r from-[#01081b]/40 to-transparent border-dashed flex items-end overflow-hidden">
+						<div className="h-50 sm:h-auto flex items-end group relative px-3 py-6 md:p-6 rounded-4xl border border-[#CBACBF]/20 bg-grid bg-gradient-to-r from-[#01081b]/40 to-transparent border-dashed overflow-hidden">
 							{/* Glowing Tracer */}
 							<motion.div
 								className="absolute top-0 left-0 w-full h-full rounded-4xl pointer-events-none"
@@ -130,11 +130,11 @@ import { motion } from 'framer-motion'
 							<div className="relative z-10">
 								<p className="text-sm text-white font-light font-sans mt-4 group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 									I constantly try to improve <br />
-									<span className="font-bold text-3xl">My tech stack</span>
+									<span className="font-bold text-2xl sm:text-3xl">My tech stack</span>
 								</p>
 
 								<div className="flex flex-wrap gap-2 mt-4 group-hover:translate-x-2 transition-all duration-500 ease-in-out">
-									{['JavaScript', 'TypeScript', 'ReactJs', 'TailwindCSS', 'FastAPI', 'Firebase', 'RestAPI', 'Framer motion'].map((skill, i) => (
+									{['JavaScript', 'TypeScript', 'ReactJs', 'TailwindCSS', 'Redux', 'RestAPI', 'Framer motion'].map((skill, i) => (
 									<span
 										key={i}
 										className="text-xs sm:text-sm border border-[#CBACBF]/40 text-white px-2 py-1 rounded-full bg-[#01081b]/60"

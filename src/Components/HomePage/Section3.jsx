@@ -19,25 +19,25 @@ import { IoCopyOutline } from 'react-icons/io5'
 
 const Section3 = () => {
 	return (
-		<div className="bg-[#01081b] text-white px-3 md:px-6 pt-4">
+		<div className="bg-[#01081b]  text-white px-4 md:px-6 lg:px-8 xl:px-10 pt-6 sm:pt-10">
 			<div className="grid sm:grid-cols-5 grid-cols-1 gap-6 max-w-full mx-auto h-auto">
 
 				{/* Right Side Grid (now comes first on large screens) */}
-				<div className="sm:col-span-2 grid grid-cols-1 gap-6 order-2 lg:order-1">
-					
+				<div className="sm:col-span-5 lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 order-2 lg:order-1">
+					 
 					{/* First (Top Left now) */}
-					<div className="px-3 py-6 md:p-6 rounded-4xl overflow-hidden bg-gradient-to-b from-[#5ac6ff1a] via-transparent to-[#01081b]/40 border border-[#CBACBF]/20 group">
+					<div className="h-50 sm:h-auto flex items-center bg-grid px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20 group">
 						<div className="transition-all duration-500 ease-in-out group-hover:translate-x-2">
-							<p className="text-xl sm:text-2xl md:text-3xl font-bold">
-								Tech enthusiast <br className='hidden' /> with a passion for development.
+							<p className="text- sm:text-xl md:text-2xl font-bold">
+								Tech enthusiast with a <br />passion for development.
 							</p>
 							<p className="text-xl sm:text-2xl md:text-3xl font-bold">
-								I design modern, <br className='hidden' /> user focused products.
+								I design modern, user focused products.
 							</p>
 						</div>
 					</div>
 					{/* Second (Bottom Left now) */}
-					<div className="group bg-[#170264] relative px-3 py-6 md:p-6 rounded-4xl border border-[#CBACBF]/20 overflow-hidden flex flex-col items-center justify-center text-center">
+					<div className="h-50 sm:h-auto group bg-[#170264] relative px-3 py-6 md:p-6 rounded-4xl border border-[#CBACBF]/20 overflow-hidden flex flex-col items-center justify-center text-center">
 
 						{/* Animated glowing background blobs */}
 						<div className="absolute inset-0 z-0 overflow-hidden">
@@ -141,7 +141,7 @@ const Section3 = () => {
 
 				{/* Main Grid on Right for lg screen */}
 				<div
-					className="group bg-grid sm:col-span-3 order-1 sm:order-2 relative flex items-center justify-start px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20"
+					className="h-50  sm:h-auto group bg-grid sm:col-span-5 lg:col-span-3 order-1 sm:order-2 relative flex items-center justify-start px-3 py-6 md:p-6 rounded-4xl overflow-hidden border border-[#CBACBF]/20"
 				>
 					{/* Overlay */}
             	<div className="absolute bg-gradient-to-b from-[#01081b] to-transparent inset-0 z-0"></div>
@@ -161,9 +161,9 @@ const Section3 = () => {
 					{/* Main Text Content */}
 					<p className="relative z-20 text-sm md:max-w-120 font-normal font-sans text-white group-hover:translate-x-2 transition-all duration-500 ease-in-out">
 						The Inside Scoop<br />
-						<span className="text-xl sm:text-2xl md:text-3xl font-semibold text-white"> 
+						<span className="text-lg sm:text-2xl md:text-3xl font-semibold text-white"> 
 							currently building advanced <br className='hidden' /> projects with <span className="text-[#CBACBF]">TypeScript</span>, <br className='hidden' />
-							while also expanding my skills <br className='hidden' /> with <span className="text-[#CBACBF]">FastAPI</span> and working <br className='hidden' /> extensively with <span className="text-[#CBACBF]">RESTful APIs</span>.
+							while also expanding my skills <br className='hidden' /> and working <br className='hidden' /> extensively with <span className="text-[#CBACBF]">RESTful APIs</span>.
 						</span>
 					</p>
 				</div>
